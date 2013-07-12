@@ -1,0 +1,10 @@
+{
+	"host_map": [
+		"$.esko.com => www.esko.com",
+		"$.esko.com => esko.com",
+		"$.support.esko.com => support.esko.com",
+		"$.help.esko.com => help.esko.com",
+		"$.eskolink.esko.com => eskolink.esko.com",
+		"$.blog.esko.com => blog.esko.com"
+	]
+}
