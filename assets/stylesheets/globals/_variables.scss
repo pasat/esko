@@ -15,11 +15,13 @@ $base-line-height: 24px;
 // Greens
 $green1:                  #00c109;
 $green2:                  #78c158;
-$green3:                  #057400;
+$green3:                  #4daf7c;
 $green4:                  #057a01;
 
+$green5:                  #4eaf7c;
+
 // Blues
-$blue1:                   #3500ED;
+$blue1:                   #0C74A6;
 $blue2:                   #17338F;
 $blue3:                   #3ca3e0;
 
@@ -34,16 +36,27 @@ $gray1:                   #EEEEEE;
 $gray2:                   #F2F3F5;
 $gray3:                   #c8c8c8;
 $gray4:                   #aaa;
-$gray5:                   #2C2C2C;
+$gray5:                   #505050;
 $gray6:                   #CCC;
 $gray7:                   #666;
+$gray8:                   #222;
 
 // Oranges
 $orange1:                 #f36721;
 
+// Yellow
+$yellow:                  #ffe162;
+
+$yellow1:                 darken($yellow, 10%);
+$yellow2:                 darken($yellow, 15%);
+
+$yellow3:                 #ffe162;
+$yellow4:                 #ffd654;
+$yellow5:                 #fbd051;
+
 // Typography
 // ----------
-$font-family:             "Helvetica Neue", Helvetica, Verdana;
+$font-family:             Arial, sans-serif;
 $base-font-size:          16px;
 $line-height:             24px;
 $text-color:              $gray5;
@@ -61,11 +74,15 @@ $h3-size:                 $base-font-size + 3px;
 $border-green2:           1px solid $green2;
 $border-green2-shaded:    1px solid shade($green2, 20%);
 $border-gray3:            1px solid $gray3;
+$border-gray7:            1px solid $gray7;
+$border-gray8:            1px solid $gray8;
+$border-black:            1px solid $black;
 
 // Gradients
 // ---------
 $grad-green1:             linear-gradient($green1 0, $green4 100%);
 $grad-green2:             linear-gradient(lighten($green2, 40%) 0, $green2 100%);
+$grad-green3:             linear-gradient($green5, $green5);
 $grad-gray2:              linear-gradient(lighten($gray2, 40%) 0, $gray2 100%);
 
 // Component Sizing
@@ -85,8 +102,10 @@ $text-shadow-white:       0 1px $white;
 
 // Box Shadows
 // -----------
-$box-shadow:               0 1px 3px rgba(0,0,0,0.9), 0 -1px 2px rgba(250,250,250,0.8);
+$box-shadow:              0 1px 3px rgba(0,0,0,0.9), 0 -1px 2px rgba(250,250,250,0.8);
 $box-shadow-inset:        inset 0 1px 0 rgba(255,255,255,0.75), inset 0 -1px 1px rgba(255,255,255,.3);
+$box-shadow-mixed:        0px 0px 2px rgba(0, 0, 0, 0.35), inset 1px 1px 0px rgba(255,255,255,.25);
+$box-shadow-none:         0 0px 0px rgba(0,0,0,0.0), inset 0 0px 0px rgba(0,0,0,0.0);
 
 
 // Header

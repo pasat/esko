@@ -252,6 +252,10 @@
         text-transform: uppercase;
         color: $white;
         padding-left: $padding/2;
+				font-family: 'Montserrat', sans-serif;
+				font-weight: normal;
+				text-transform: capitalize;
+				font-size: 18px;
         
         &:after {
 	        content:"";

@@ -38,12 +38,12 @@ $('./body') {
 			$("./div[@id='SearchHolder']") {
 				add_class("mw_search_bar")
 
-				$("./div[@class='clearfloats']") {
-					add_class("mw_display_none")
+				move_here(".//input[@class='searchSubmitButton']","top") {
+					add_class("mw_search_btn")
 				}
 
-				$(".//input[@class='searchSubmitButton']") {
-					add_class("mw_search_btn")
+				$("./div[@class='clearfloats']") {
+					add_class("mw_display_none")
 				}
 
 				$(".//input[@class='SearchField']") {
@@ -53,6 +53,14 @@ $('./body') {
 						add_class("mw_search_field_container")
 					}
 				}
+			}
+
+			$("./div[@class='clearfloats']") {
+				add_class("mw_display_none")
+			}
+
+			$("./div[@id='ContactHolder']") {
+				add_class("mw_display_none")
 			}
 		}
 	}

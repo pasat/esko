@@ -3,7 +3,7 @@ $("./body") {
 		attribute("data-role","page")
 	}
 	$(".//div[@id='mw_body']") {
-		add_class("mw_home")
+		add_class("mw_category")
 		attribute("data-role","content")
 		
 		move_here("//div[@id='ContentFrame']") {
@@ -11,8 +11,27 @@ $("./body") {
 				remove()
 			}
 
-			$("./div[@id='slider-wrapper']") {
-				move_here("./div[@id='slider']","top")
+			$("./div[@id='MainContentHolder']") {
+				$("./div[@class='MainContent']") {
+					$("./div[@class='ContentDetail']") {
+						$("./div[@class='TwoCol']") {
+							$("./div[@class='FirstCol']") {
+								$(".//img") {
+									remove('@style')
+								}
+							}
+							$("./div[@class='LastCol']") {
+								$(".//img") {
+									remove('@style')
+								}
+							}
+						}
+
+						$("./div") {
+							remove('@style')
+						}
+					}
+				}
 			}
 		}
 	}

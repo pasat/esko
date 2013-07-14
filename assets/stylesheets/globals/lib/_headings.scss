@@ -17,11 +17,11 @@
 }
 
 @mixin h1 {
-  @include heading-mixer($h1-size, $gray5, normal, $text-shadow-gray3);
+  @include heading-mixer($h1-size, $gray5, normal, false);
 }
 
 @mixin h2 {
-  @include heading-mixer($h2-size, $gray5, normal, $text-shadow-gray3);
+  @include heading-mixer($h2-size, $gray5, normal, false);
 }
 
 .mw-h1 {

@@ -1,0 +1,154 @@
+#mw_body {
+	&.mw_subcategory {
+		padding: $padding*2.5 $padding*1.5 $padding*2;
+		background-color: $white;
+		margin: 0px auto;
+		
+		#ContentFrame {
+			margin-top: 0px;
+			width: auto;
+			height: auto;
+			padding: 0px;
+
+			#BreadcrumbBar {
+				display: none;
+			}
+
+			#ContentHeader {
+				width: auto;
+				display: block;
+				background-image: none !important;
+				padding: 0px 0px;
+
+				#TitleTextHolder {
+					padding: 0px 0px;
+
+					h2 {
+						@include h2;
+						font-family: 'Montserrat', sans-serif;
+						padding-left: 0px !important;
+						background-image: none;
+						font-size: 15px;
+						line-height: 1.4em;
+						display: block;
+						margin-bottom: 10px !important;
+					}
+					h1 {
+						@include h1;
+						line-height: 1.2em;
+						font-family: 'Montserrat', sans-serif;
+						font-weight: bold;
+						color: #AABB11;
+					}
+					p {
+						padding: 0px;
+					}
+				}
+			}
+
+			#MainContentHolder {
+				width: auto;
+				float: none;
+				display: block;
+
+				.MainContent {
+					width: auto;
+					float: none;
+					display: block;
+					padding: 0px;
+
+					.ContentDetail {
+						p {
+							font-size: 15px;
+							line-height: 1.54em;
+						}
+
+						.div-line {
+							background-position: 0px center;
+						}
+
+						.TwoCol {
+							.FirstCol,
+							.LastCol {
+								float: none;
+								display: block;
+								width: auto;
+								margin: 0px;
+
+								h2 {
+									font-family: 'Montserrat', sans-serif;
+									font-weight: bold;
+									text-transform: uppercase;
+									font-size: 18px;
+									text-align: left;
+									margin-bottom: $margin*2 !important;
+									display: block;
+								}
+
+								h3 {
+									font-size: 16px;
+									font-family: 'Montserrat', sans-serif;
+									font-weight: bold;
+									background-image: none;
+									padding-left: 0px;
+									display: block;
+									margin: 18px 0 10px !important;
+									text-transform: capitalize;
+								}
+
+								p {
+									a {
+										color: $blue1;
+									}
+								}
+
+								img {
+									margin: $margin auto;
+									display: block;
+								}
+							}
+						}
+					}
+				}
+
+				#RightColumn {
+					width: auto;
+					float: none;
+					display: block;
+
+					.RightColumn_Block {
+						width: auto;
+						display: block;
+						border-top: 4px solid #95b210;
+						background-image: none;
+						padding: $padding 0px !important;
+
+						.context-title {
+							font-size: 16px !important;
+							font-family: 'Montserrat', sans-serif;
+							font-weight: bold;
+						}
+						.txt {
+							float: none;
+							margin-top: $margin*2;
+
+							.eskobutton {
+								@include btn-green;
+								display: block;
+								width: 290px;
+								margin: 0 auto;
+								float: none;
+								font-family: 'Montserrat', sans-serif;
+								padding-left: 0px;
+								padding-right: 0px;
+								font-size: 16px !important;
+								font-weight: normal !important;
+								text-shadow: none !important;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
