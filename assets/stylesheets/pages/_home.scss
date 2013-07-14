@@ -1,5 +1,58 @@
-// Every page should have a class on the body
-// Scope that in each file at the start
-.mw-home {
+#mw_body {
+	&.mw_home {
+		padding: 0px 0px $padding;
+		background-color: $white;
+		
+		#ContentFrame {
+			margin-top: 0px;
+			width: auto;
+			height: auto;
 
+			#slider-wrapper {
+				width: auto;
+				height: auto;
+
+				#ItemWrapper {
+					position: relative;
+					top: 0px;
+					left: 0px;
+					float: none;
+					width: auto;
+					padding: 0px $padding;
+
+					.ProductsItem {
+						float: none;
+						width: auto;
+						padding: $padding*1.5 0px;
+
+						&>h2 {
+							font-size: 16px;
+							display: block;
+							float: none;
+							padding: 0px 2px;
+						}
+
+						.Item {
+							margin: 0px 3px;
+							width: auto;
+							float: none;
+							display: block;
+
+							&>a {
+								font-size: 14px;
+							}
+
+
+						}
+					}
+					.OtherItem {
+						float: none;
+						width: auto;
+						display: block;
+						clear: both;
+					}
+				}
+			}
+		}
+	}
 }

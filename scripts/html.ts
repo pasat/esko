@@ -8,24 +8,25 @@ $("/html") {
   clean_mobile_meta_tags()
 
   # Needed to begin mobilizing
-  remove_all_styles()
+  # remove_all_styles()
   remove_html_comments()
 
   # Late load all the images on the site
   # lateload()
 
   # Remove all script tags not marked with "data-keep" attribute
-  remove_desktop_js();
+  # remove_desktop_js();
 
   
 
   add_assets()
 
+  @import sections/scaffold.ts
   @import sections/header.ts
   @import sections/footer.ts
-
+  
   @import mappings.ts
 
-  lazyLoadImages()
+  # lazyLoadImages()
 }
 
