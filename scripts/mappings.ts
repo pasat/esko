@@ -30,6 +30,10 @@ match($status) {
         log("--> Importing pages/subcategory.ts in mappings.ts")
         @import pages/subcategory.ts
       }
+      with(/contact-product-specialist/) {
+        log("--> Importing pages/contact.ts in mappings.ts")
+        @import pages/contact.ts
+      }
       else() {
         log("--> No page match in mappings.ts")
       }

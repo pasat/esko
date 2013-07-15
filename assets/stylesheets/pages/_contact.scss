@@ -1,0 +1,121 @@
+#mw_body {
+	&.mw_contact {
+		padding: $padding*2.5 $padding*1.5 $padding*4;
+		background-color: $white;
+		margin: 0px auto;
+		max-width: 450px;
+		
+		#ContentFrame {
+			margin-top: 0px;
+			width: auto;
+			height: auto;
+			padding: 0px;
+
+			#BreadcrumbBar {
+				display: none;
+			}
+
+			#ContentHeader {
+				width: auto;
+				display: block;
+				background-image: none !important;
+				padding: 0px 0px;
+
+				#TitleTextHolder {
+					padding: 0px 0px;
+
+					h1 {
+						@include h1;
+						line-height: 1.2em;
+						font-family: 'Montserrat', sans-serif;
+						font-weight: bold;
+						color: #AABB11;
+					}
+					p {
+						padding: 0px;
+						font-size: 15px;
+						line-height: 1.54em;
+						width: auto;
+					}
+				}
+			}
+
+			#MainContentHolder {
+				width: auto;
+				display: block;
+				overflow: visible;
+
+				.MainContent {
+					padding: 0px;
+					margin: 0px;
+
+					.scfForm {
+						.scfSectionContent {
+							float: none;
+							display: block;
+
+							&>div {
+								.scfSingleLineTextLabel,
+								.scfMultipleLineTextLabel,
+								.scfDropListLabel {
+									display: inline-block;
+									float: left;
+									width: auto;
+
+									font-size: 16px;
+									font-family: 'Montserrat', sans-serif;
+									font-weight: bold;
+									background-image: none;
+									padding-left: 2px;
+									padding-right: 2px;
+									margin: $padding 0 $padding !important;
+									text-transform: capitalize;
+								}
+								.scfSingleLineGeneralPanel {
+									display: block;
+									float: none;
+									width: auto;
+									clear: both;
+								}
+								.scfRequired {
+									float: left;
+								}
+
+								.scfMultipleLineGeneralPanel {
+									display: block;
+									float: none;
+									width: auto;
+									clear: both;
+									padding: 0px;
+
+									.scfMultipleLineTextBox {
+										display: block;
+										width: 100%;
+										float: none;
+										height: 100px;
+									}
+								}
+
+								.scfDropListGeneralPanel {
+									float: none;
+									display: block;
+									width: auto;
+								}
+							}
+						}
+
+						.scfSubmitButtonBorder {
+							input[type="submit"] {
+								@include btn-green;
+								color: $white;
+								display: block;
+								margin: 0 auto;
+								width: 160px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
