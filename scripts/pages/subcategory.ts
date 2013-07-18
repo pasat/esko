@@ -11,6 +11,17 @@ $("./body") {
 				remove()
 			}
 
+			move_here("./div[@id='SubNavBar']","top") {
+				inner_wrap("div") {
+					attribute("id","scroller")
+				}
+				inject_after("<script type='text/javascript'>var myScroll = new iScroll('SubNavBar', { hScrollbar: false, vScrollbar: false, vScroll: false, onBeforeScrollStart: function ( e ) {
+        if ( this.absDistX > (this.absDistY + 5 ) ) {
+            e.preventDefault();
+        }
+    } });</script>")
+			}
+
 			$("./div[@id='MainContentHolder']") {
 				move_here("./div[@id='RightColumn']","bottom")
 
@@ -19,6 +30,10 @@ $("./body") {
 					attributes(width:"",height:"")
 				}
 				$(".//a[@class='eskobutton']") {
+					remove("@style")
+				}
+
+				$(".//h2") {
 					remove("@style")
 				}
 			}

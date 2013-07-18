@@ -14,8 +14,12 @@ $('./body') {
 				insert_menu_button(%menu_uranium_id)
 			}
 			insert_header_buttons("right") {
-				%cart_counter_text = strip_non_digits(fetch(xpath_from_body("li[@class='CartLink']/a/span/text()"))) # CHANGE THIS
-				insert_cart_button_with_counter("cart.php", %cart_counter_text) # CHANGE THIS
+				insert("li") {
+					attribute("id","mw_search_btn")
+					attribute("data-ur-toggler-component","button")
+					attribute("data-ur-id","navigation_search")
+					attribute("data-ur-state","disabled")
+				}
 			}
 			grab_site_logo("/html/body//div[@id='Logo']") # CHANGE THIS
 
@@ -35,6 +39,10 @@ $('./body') {
 	  #insert_search_bar("get", "search.php", "return check_small_search_form()") # CHANGE THIS
 	    
 		move_here("//div[@id='Searchbar']") {
+			attribute("data-ur-toggler-component","content")
+			attribute("data-ur-id","navigation_search")
+			attribute("data-ur-state","disabled")
+
 			$("./div[@id='SearchHolder']") {
 				add_class("mw_search_bar")
 
@@ -77,28 +85,32 @@ $('./body') {
 				$("li/a") {
 					insert_menu_item(fetch("text()"), fetch("@href"))
 				}
-			}  	
 
-			$("li[contains(@class,'Industries')]/div/ul/li[@class='parent']") {
-				add_class("mw_nav_sub_content")
-				attribute("data-ur-set","toggler")
+				$("li[1]/ul") {
+					add_class("mw_nav_sub_content")
+					move_to("//div[@class='mw_nav_item'][1]//ul[@class='mw_nav_content']")
+				}
 
-				$("a") {
-					name("div")
-					add_class("mw_nav_sub_btn_inner")
+				$("li[2]/ul") {
+					add_class("mw_nav_sub_content")
+					move_to("//div[@class='mw_nav_item'][2]//ul[@class='mw_nav_content']")
 				}
-				inner_wrap("div") {
-					add_class("mw_nav_sub_btn")
-					attribute("data-ur-toggler-component","button")
-					attribute("data-ur-state","disabled")
+
+				$("li[3]/ul") {
+					add_class("mw_nav_sub_content")
+					move_to("//div[@class='mw_nav_item'][3]//ul[@class='mw_nav_content']")
 				}
-				insert("div") {
-					add_class("mw_nav_sub_content_inner")
-					attribute("data-ur-toggler-component","content")
-					attribute("data-ur-state","disabled")
+
+				$("li[4]/ul") {
+					add_class("mw_nav_sub_content")
+					move_to("//div[@class='mw_nav_item'][4]//ul[@class='mw_nav_content']")
 				}
-				move_to("//div[@class='mw_nav_item'][1]//ul[@class='mw_nav_content']")
-			}
+
+				$("li[5]/ul") {
+					add_class("mw_nav_sub_content")
+					move_to("//div[@class='mw_nav_item'][5]//ul[@class='mw_nav_content']")
+				}
+			} 
 		}
 	}
   

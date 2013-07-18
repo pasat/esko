@@ -98,7 +98,7 @@ $spacing:                 10px;
 $text-shadow-green2:      2px 1px 1px $green2;
 $text-shadow-gray3:       2px 1px 2px $gray3;
 $text-shadow-black1:      2px 1px 2px $black;
-$text-shadow-white:       0 1px $white;
+$text-shadow-white:       0 1px rgba($white, 0.55);
 
 // Box Shadows
 // -----------
@@ -166,7 +166,7 @@ $nav-button-gradient-top-color:        #4b7bb2;
 $nav-button-gradient-bottom-color:     #4b7bb2;
 $nav-button-text-color:                $white;
 $nav-button-border-color:              $black;
-$nav-item-text-color:                  $gray6;
+$nav-item-text-color:                  #5E6D82;
 $nav-item-border-color:                $gray4;
 $nav-item-background-color:            transparent;
 $nav-button-collapsed-icon:            get-icon("sprites/plus.png");

@@ -1,6 +1,6 @@
 #mw_body {
 	&.mw_subcategory {
-		padding: $padding*2.5 $padding*1.5 $padding*2;
+		padding: 0px 0px $padding*2;
 		background-color: $white;
 		margin: 0px auto;
 		
@@ -14,11 +14,73 @@
 				display: none;
 			}
 
+			#SubNavBar {
+				width: auto;
+				border-bottom: 1px solid $gray6;
+				height: 43px;
+				width:100%;
+				background:#aaa;
+				overflow:auto;
+
+				#scroller {
+					width:2040px;
+					height:100%;
+					float:left;
+					padding:0;
+
+					&>ul {
+						list-style:none;
+						display:block;
+						float:left;
+						width:100%;
+						height:100%;
+						padding:0;
+						margin:0;
+						text-align:left;
+
+						&>li {
+							display:block;
+							vertical-align:middle;
+							float:left;
+							width:120px;
+							height:100%;
+							border-left:1px solid #ccc;
+							border-right:1px solid #fff;
+							background-color:#fafafa;
+							font-size:14px;
+							text-align: center;
+
+							a {
+								font-size: 14px;
+								text-align: center;
+							}
+						}
+					}
+				}
+			}
+
+
+
+
+
+// #wrapper {
+// 	position:absolute; z-index:1;
+// 	top:45px; bottom:0; left:0;
+// 	width:100%;
+// 	background:#aaa;
+// 	overflow:auto;
+// }
+
+
+
+
+
+
 			#ContentHeader {
 				width: auto;
 				display: block;
 				background-image: none !important;
-				padding: 0px 0px;
+				padding: $padding*2 $padding*1.5 0px;
 
 				#TitleTextHolder {
 					padding: 0px 0px;
@@ -33,7 +95,8 @@
 						display: block;
 						margin-bottom: 10px !important;
 					}
-					h1 {
+					h1,
+					.product-title {
 						@include h1;
 						line-height: 1.2em;
 						font-family: 'Montserrat', sans-serif;
@@ -42,6 +105,9 @@
 					}
 					p {
 						padding: 0px;
+						font-size: 15px;
+						line-height: 1.54em;
+						width: auto;
 					}
 				}
 			}
@@ -50,12 +116,26 @@
 				width: auto;
 				float: none;
 				display: block;
+				padding: $padding $padding*1.5;
 
 				.MainContent {
 					width: auto;
 					float: none;
 					display: block;
 					padding: 0px;
+
+					&>h1 {
+						display: block;
+						font-size: 17px !important;
+						line-height: 1.4em !important;
+						margin-bottom: $margin*2;
+					}
+
+					&>p {
+						font-size: 15px;
+						line-height: 1.54em;
+						padding: 0px;
+					}
 
 					.ContentDetail {
 						p {
@@ -66,48 +146,62 @@
 						.div-line {
 							background-position: 0px center;
 						}
+					}
 
-						.TwoCol {
-							.FirstCol,
-							.LastCol {
-								float: none;
+					.TwoCol {
+						.FirstCol,
+						.LastCol {
+							float: none;
+							display: inline-block;
+							width: 100%;
+							margin: 0px;
+
+							h2 {
+								font-family: 'Montserrat', sans-serif;
+								font-weight: bold;
+								text-transform: uppercase;
+								font-size: 18px;
+								text-align: left;
+								margin-bottom: $margin*2 !important;
 								display: block;
-								width: auto;
-								margin: 0px;
+							}
 
-								h2 {
-									font-family: 'Montserrat', sans-serif;
-									font-weight: bold;
-									text-transform: uppercase;
-									font-size: 18px;
-									text-align: left;
-									margin-bottom: $margin*2 !important;
-									display: block;
-								}
+							h3 {
+								font-size: 16px;
+								font-family: 'Montserrat', sans-serif;
+								font-weight: bold;
+								background-image: none;
+								padding-left: 0px;
+								display: block;
+								margin: 18px 0 10px !important;
+								text-transform: capitalize;
+							}
 
-								h3 {
-									font-size: 16px;
-									font-family: 'Montserrat', sans-serif;
-									font-weight: bold;
-									background-image: none;
-									padding-left: 0px;
-									display: block;
-									margin: 18px 0 10px !important;
-									text-transform: capitalize;
-								}
+							p {
+								font-size: 15px;
+								line-height: 1.54em;
 
-								p {
-									a {
-										color: $blue1;
-									}
-								}
-
-								img {
-									margin: $margin auto;
-									display: block;
+								a {
+									color: $blue1;
 								}
 							}
+
+							img {
+								margin: $margin auto $margin*3;
+								display: block;
+							}
+
+							.floatR,
+							.floatL {
+								float: none;
+							}
 						}
+					}
+
+					img[alt="Divider Line"] {
+						display: block;
+						margin-bottom: $margin*2;
+						width: auto;
 					}
 				}
 

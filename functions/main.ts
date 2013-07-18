@@ -690,6 +690,14 @@
 # @arg Text %uranium_id => The Uranium ID that keys this content to a Uranium button div with the same ID.
 @func XMLNode.insert_menu_content(Text %uranium_id) {
   insert("div", id: "mw_menu_content", data-role: "panel") {
+    insert("div", id: "mw_nav_bar") {
+      insert("a", href: "#mw_header", class: "mw_close", data-rel: "close") {
+        inject_top("Close")
+      }
+      insert("h3") {
+        inject_top("Content")
+      }
+    }
     move_to("/html/body//header[@id='mw_header']", "before")
     $menu_content_path = path()
     yield()
