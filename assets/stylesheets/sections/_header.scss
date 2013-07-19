@@ -214,8 +214,8 @@
 		margin: 0px 0px $margin*1.5;
 		display: block;
 		z-index: 100;
-		border-bottom: 1px solid #C9D2E0;
-		@include background(linear-gradient(#EAEDF2, #E1E5EC));
+		// border-bottom: 1px solid #C9D2E0;
+		// @include background(linear-gradient(#EAEDF2, #E1E5EC));
 
 		.mw_close {
 			position: absolute;
@@ -230,7 +230,7 @@
 		}
 
 		h3 {
-			display: block;
+			display: none;
 			text-align: center;
 			font-size: 18px;
 			font-weight: bold;
@@ -367,7 +367,7 @@
 			border: none;
 			padding: 0px 0px;
 			border-bottom: 1px solid rgba(black, 0.10);
-			border-top: 1px solid rgba(black, 0.10);
+			border-top: 2px solid rgba(black, 0.10);
       
 			.mw_nav_sub_content {
 				list-style-type: none;
