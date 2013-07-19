@@ -68,9 +68,33 @@
 
     .mw_header_btns {
       float: right;
-      padding: $header-vertical-padding $spacing/2;
+      padding: $header-vertical-padding 0px;
       &.left {
         float: left;
+        position: relative;
+        padding-left: 4px;
+        padding-right: 5px;
+
+        &:after {
+			content:"";
+			position: absolute;  
+			top: 0;
+			left: 0;  
+			@include sprites-shadow_btn_l;
+		}
+      }
+      &.right {
+        position: relative;
+        padding-left: 5px;
+        padding-right: 4px;
+
+        &:after {
+			content:"";
+			position: absolute;  
+			top: 0;
+			left: 0;  
+			@include sprites-shadow_btn_r;
+		}
       }
       li {
         float: left;
@@ -85,11 +109,13 @@
           margin-left: 0; 
         }
         &#mw_menu_btn {
-					@include sprites-menu;
+			@include sprites-menu;
+			position: relative;
+			z-index: 100;
 					
-          &[data-ur-state='enabled'] {
-            /* @include menu-button-enabled-bg-image-style($menu-button-image-enabled); */
-          }
+			&[data-ur-state='enabled'] {
+			/* @include menu-button-enabled-bg-image-style($menu-button-image-enabled); */
+			}
         }
         &#mw_account {
           /* @include header-button-bg($account-button-image); */

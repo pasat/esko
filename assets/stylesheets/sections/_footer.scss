@@ -1,5 +1,5 @@
 #mw_footer {
-  border-top: 1px solid $gray6;
+  border-top: 0px solid $gray6;
   
   ul, li {
     list-style-type: none;
@@ -59,7 +59,7 @@
   #mw_footer_bottom {
     @include font-size(13px);
     color: $gray7;
-    background-color: $gray1;
+    background-color: #EAEDF2;
     padding-left: $padding*2;
     padding-right: $padding*2;
     text-align: center;
