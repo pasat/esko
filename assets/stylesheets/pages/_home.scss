@@ -5,6 +5,7 @@
 		
 		#ContentFrame {
 			margin-top: 0px;
+			padding-bottom: 0px;
 			width: auto;
 			height: auto;
 
@@ -13,8 +14,49 @@
 				height: auto;
 
 				#slider {
-					width: 320px !important;
 					margin: 0 auto;
+
+					.nivo-caption {
+						top: 200px;
+						left: 10px;
+						width: 300px !important;
+						display: none !important;
+
+						p {
+							font-size: 16px !important;
+
+							a {
+								font-size: 16px !important;
+							}
+
+							div {
+								font-size: 18px;
+								line-height: 1.4em;
+								background-color: $white;
+								padding: 15px;
+
+								br {
+									display: block !important;
+								}
+							}
+						}
+					}
+
+					.nivo-controlNav {
+						top: 320px;
+						right: 30px;
+
+						a {
+							background-image: none;
+							background-color: #394a59;
+							font-size: 13px;
+							padding: 3px 8px;
+							margin: 2px;
+							display: inline-block;
+							height: auto;
+							float: none;
+						}
+					}
 				}
 
 				#ItemWrapper {
@@ -29,6 +71,7 @@
 						float: none;
 						width: auto;
 						padding: $padding*1.5 0px;
+						text-align: right;
 
 						&>h2 {
 							font-family: 'Montserrat', sans-serif;
@@ -44,6 +87,7 @@
 							width: auto;
 							float: none;
 							display: block;
+							text-align: left;
 
 							&>a {
 								font-size: 14px;
@@ -54,14 +98,14 @@
 							}
 						}
 						.More {
-							float: right;
+							float: none;
 							text-align: right;
 							background-image: none;
 							background-color: #d6dbdf;
 							padding: $padding/2 $padding;
 							border: 0px solid $gray6;
 							display: inline-block;
-							margin: $margin $margin/2 $margin*2;
+							margin: $margin $margin $margin*2;
 							border-radius: 5px;
 
 							a {
@@ -77,6 +121,7 @@
 						clear: both;
 						margin: 0px;
 						padding: $padding*1.5 0px;
+						border-top: 4px solid #d6dbdf;
 
 						.mw_events {
 							border-bottom: 4px solid #d6dbdf;
@@ -128,16 +173,23 @@
 							&:after {
 						        content:"";
 						        position: absolute;
-						        top: 2px;
+						        top: 0px;
 						        right: 3px;
 						        @include sprites-plus_gray;
 						        border-left: 0px dotted rgba(black, 0.35);
 					        }
 						}
 
+						h2[data-ur-toggler-component="button"][data-ur-state="enabled"] {
+							color: #60A725;
+							&:after {
+								@include sprites-minus_green;
+							}
+						}
+
 						div[data-ur-toggler-component="content"] {
 							padding: $padding 5px 0px;
-							text-align: left;
+							text-align: right;
 
 							ul {
 								float: none;
@@ -150,6 +202,7 @@
 									padding-left: 16px;
 									background-image: none;
 									margin-bottom: 0px;
+									text-align: left;
 					  
 									&:after {
 										content:"";
@@ -176,6 +229,7 @@
 							float: none;
 							display: inline-block;
 							width: 100%;
+							text-align: left;
 
 							.ItemThumb {
 								position: absolute;
@@ -187,6 +241,7 @@
 								padding-left: $padding*4;
 								padding-top: $padding;
 								padding-bottom: $padding;
+								text-align: left;
 
 								p {
 									margin: 0px;
@@ -204,14 +259,14 @@
 						}
 
 						.More {
-							float: right;
+							float: none;
 							text-align: right;
 							background-image: none;
 							background-color: #d6dbdf;
-							padding: $padding/2 $padding;
+							padding: $padding/2 $padding 4px;
 							border: 0px solid $gray6;
 							display: inline-block;
-							margin: $margin $margin/2 $margin*2;
+							margin: $margin 0px $margin*2;
 							border-radius: 5px;
 
 							a {
@@ -222,6 +277,7 @@
 
 						&.richHTML { 
 							text-align: center;
+							border-top: 4px solid #D6DBDF;
 
 							&>h2 {
 								&:after {

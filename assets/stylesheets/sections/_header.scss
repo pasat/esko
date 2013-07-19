@@ -123,6 +123,7 @@
         &#mw_search_btn {
 	        position: relative;
 			@include sprites-search;
+			z-index: 100;
         }
         a {
           display: block;
@@ -135,7 +136,7 @@
 
   .mw_search_bar {
     clear: both;
-    border-bottom: 1px solid $gray6;
+    border-bottom: 1px solid #243D51;
     padding: $form-vertical-padding $form-side-padding;
     background-color: $form-bg-color;
     
@@ -192,11 +193,13 @@
       //NOTE: The background image must come before the linear gradient even though we're using the multiple-backgrounds syntax, or it won't show
      /*  @include background(image-url($search-btn-bg-image) no-repeat 0 center); */
       background-color: $search-btn-bg-color;
-      border: 1px solid $gray6;
+      border: 1px solid #9EA7B8;
+      border-left: none;
       text-indent: -9999px;
       position: relative;
-      border-radius: 4px;
+      border-radius: 0px 4px 4px 0px;
       display: block;
+      background-image: none;
       
       &:after {
 	      content:"Go";
@@ -245,14 +248,27 @@
 
 		.mw_close {
 			position: absolute;
-			top: 0;
-			left: 0;
+			top: 16px;
+			left: 10px;
+			width: 50px;
+			height: 32px;
 			font-size: 13px;
 			text-align: center;
 			border-radius: 4px;
-			@include sprites-back_arrow;
 			text-indent: -9999px;
 			margin-left: $margin;
+			border: 1px solid #c3d0de;
+			display: block;
+			@include box-shadow(1px 1px 0px rgba(255, 255, 255, 0.65), inset 1px 1px 0px rgba(255,255,255,.25));
+
+			&:after {
+				content:"";
+				position: absolute;
+				top: 0;
+				left: 0;
+				@include sprites-back_arrow;
+				display: block;
+			}
 		}
 
 		h3 {
