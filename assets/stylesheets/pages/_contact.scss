@@ -50,6 +50,9 @@
 					margin: 0px;
 
 					.scfForm {
+						.scfTitleBorder {
+							font-size: 16px !important;
+						}
 						.scfSectionContent {
 							float: none;
 							display: block;
@@ -94,6 +97,11 @@
 										float: none;
 										height: 100px;
 									}
+								}
+
+								.scfMultipleLineTextBox {
+									font-size: 16px !important;
+									line-height: 1.4em;
 								}
 
 								.scfDropListGeneralPanel {

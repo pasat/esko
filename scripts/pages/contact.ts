@@ -31,6 +31,12 @@ $("./body") {
 								move_here("./label[@class='scfDropListLabel']","top")
 							}
 						}
+
+						$(".//select[@class='scfDropList']") {
+							wrap("div") {
+								add_class("mw_select")
+							}
+						}
 					}
 				}
 			}
