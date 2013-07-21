@@ -11,19 +11,49 @@ $("./body") {
 				remove()
 			}
 
-			move_here("./div[@id='SubNavBar']","top") {
+			$("./div[@id='SubNavBar']") {
 				inner_wrap("div") {
-					attribute("id","scroller")
-				}
-				inject_after("<script type='text/javascript'>var myScroll = new iScroll('SubNavBar', { hScrollbar: false, vScrollbar: false, vScroll: false, onBeforeScrollStart: function ( e ) {
-        if ( this.absDistX > (this.absDistY + 5 ) ) {
-            e.preventDefault();
-        }
-    } });</script>")
+			 		attribute("id","scroller")
+			 	}
+
+			 	inject_after("<script type='text/javascript'>var myScroll = new iScroll('SubNavBar', { hScrollbar: false, vScrollbar: false, vScroll: false, onBeforeScrollStart: function ( e ) { if ( this.absDistX > (this.absDistY + 5 ) ) { e.preventDefault();}} });</script>")
 			}
 
 			$("./div[@id='MainContentHolder']") {
-				move_here("./div[@id='RightColumn']","bottom")
+				$(".//img[contains(@src,'8FA5EBC4B16A4F58923BC451E9106450.jpg')]") {
+					add_class("mw_display_none")
+				}
+				move_here("./div[@id='RightColumn']","bottom") {
+					$("./div[@class='RightColumn_Block']") {
+						$("./div[@class='txt']") {
+							$("./ul[@id='PI_UL_Right']") {
+								$("./li") {
+									$("./a") {
+										$("./img[contains(@alt,'Contact Us')]") {
+											inject_before("Contact Us")
+											add_class("mw_display_none")
+										}
+									}
+								}
+
+								$("./li[1]") {
+									attribute("data-ur-set","toggler")
+
+									$("./a") {
+										name("span")
+										attribute("data-ur-toggler-component","button")
+											attribute("data-ur-state","disabled")
+									}
+
+									$("./ul") {
+										attribute("data-ur-toggler-component","content")
+										attribute("data-ur-state","disabled")
+									}
+								}
+							}
+						}
+					}
+				}
 
 				$(".//img") {
 					remove("@style")
