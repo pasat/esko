@@ -105,13 +105,13 @@
 						@include h1;
 						line-height: 1.2em;
 						font-family: 'Montserrat', sans-serif;
-						font-weight: bold;
+						font-weight: normal !important;
 						color: #AABB11;
-						margin-bottom: 5px;
+						margin-bottom: 0px !important;
 						text-shadow: $text-shadow-white;
 					}
 					p {
-						padding: 0px;
+						padding: 5px 0px 0px;
 						font-size: 15px;
 						line-height: 1.54em;
 						width: auto;
@@ -127,6 +127,93 @@
 				padding: $padding*3 $padding*1.5;
 				clear: both;
 				margin-top: 0px !important;
+
+				#solutions-overview-container {
+					margin: 0px;
+					width: auto;
+					display: block;
+
+					.solution-container {
+						width: auto;
+						float: none;
+						display: block;
+						padding: $padding*1.5 $padding*1.5 0px;
+						border: 1px solid #999;
+						border-radius: 0px;
+
+						.solution-category {
+							display: block;
+							width: auto;
+							float: none;
+							font-weight: bold;
+
+							font-size: 17px;
+							font-family: 'Montserrat', sans-serif;
+							font-weight: bold;
+							background-image: none;
+							padding-left: 0px;
+							display: block;
+							margin: 0px 0 $margin*2 !important;
+							text-transform: uppercase;
+						}
+						.solution-product-list {
+							float: none;
+							display: inline-block;
+							width: 100%;
+							padding: 0px;
+							background-image: none;
+
+							.solution-product {
+								border-bottom: 1px dotted #999;
+								padding-bottom: $padding;
+								margin-bottom: $margin;
+
+								&:last-child {
+									border-bottom: none;
+								}
+
+								.solution-product-icon {
+									margin-top: 2px;
+								}
+
+								.solution-product-name {
+									width: auto;
+
+									a {
+										font-size: 15px;
+										line-height: 1.54em;
+									}
+								}
+								.solution-product-desc {
+									width: auto;
+									float: none;
+									clear: both;
+									margin-left: 0px;
+									padding-top: $padding;
+									padding-left: 0px;
+									background-image: none;
+
+									a {
+										font-size: 15px;
+										line-height: 1.54em;
+										position: relative;
+										display: block;
+										padding-left: $padding*2;
+					  
+										&:after {
+											content:"";
+											position: absolute;
+											top: -9px;
+											left: -11px;
+											display: block;
+											@include sprites-blackArrowRight;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
 
 				.MainContent {
 					width: auto;
