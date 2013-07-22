@@ -24,9 +24,9 @@ a {
 }
 
 // Don't show the highlight of a link when tapped
-a, a:link {
-  -webkit-tap-highlight-color: rgba(225, 244, 204, 0.5);
-}
+// a, a:link {
+//   -webkit-tap-highlight-color: rgba(225, 244, 204, 0.5);
+// }
 
 img {
   max-width: 100%;

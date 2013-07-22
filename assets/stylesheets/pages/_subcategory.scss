@@ -83,7 +83,7 @@
 				width: auto;
 				display: block;
 				background-image: none !important;
-				padding: $padding*2 $padding*1.5 $padding*2 !important;
+				padding: $padding*2 $padding*1.5 $padding*1.5 !important;
 				background-color: #fbfbfc !important;
 				border-bottom: 1px solid #D6DBDF;
 
@@ -98,7 +98,7 @@
 						font-size: 15px;
 						line-height: 1.4em;
 						display: block;
-						margin-bottom: 10px !important;
+						margin-bottom: 5px !important;
 					}
 					h1,
 					.product-title {
@@ -109,6 +109,7 @@
 						color: #AABB11;
 						margin-bottom: 0px !important;
 						text-shadow: $text-shadow-white;
+						font-size: 22px;
 					}
 					p {
 						padding: 5px 0px 0px;
@@ -415,7 +416,10 @@
 							font-family: 'Montserrat', sans-serif;
 							font-weight: bold;
 							margin-top: $margin*2;
+							// margin-bottom: $margin*2 !important;
 							text-align: left;
+							display: block;
+
 						}
 						.txt {
 							float: none;
@@ -425,14 +429,18 @@
 								@include btn-green;
 								display: block;
 								width: 290px;
-								margin: 0 auto;
+								margin: $margin*2 auto 0px;
 								float: none;
-								font-family: 'Montserrat', sans-serif;
 								padding-left: 0px;
 								padding-right: 0px;
+								font-family: 'Montserrat', sans-serif;
 								font-size: 16px !important;
 								font-weight: normal !important;
 								text-shadow: none !important;
+
+								br {
+									display: block !important;
+								}
 							}
 
 							#PI_UL_Right {
